@@ -88,9 +88,13 @@ io.on('connection', function(socket) {
     })
 
     socket.on('online', function(data) {
-        if (!online_users.includes(data.username)) {
+        if (!online_users.find( user => user.username === data.username )) {
             online_users.push({username: data.username, text: "Paid"});
         }
+        console.log(data);
+        
+        console.log(online_users);
+        
         io.emit('online', online_users);
     });
 
@@ -118,7 +122,7 @@ io.on('connection', function(socket) {
         io.emit('online', online_users);
     });
 
-    socket.once('disconnect', function() {
+    socket.once('disconnect', function() {        
         for (let i = 0; i < users.length; ++i) {
             if (users[i].username == actualuser) {
                 users.splice(i, 1);

@@ -128,6 +128,7 @@ $(function () {
     });
 
     function newOnline(username, text) {
+        
         let btn = "<button name='" + username + "'>" + text + "</button>"
         let row = "<tr><th scope='row'>" + username + "</th><td>" + btn + "</td></tr>"
         $("#tbody").append(row)
