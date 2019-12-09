@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+  body {
+    background-color: black;
+  }
+
+  /* for the notifier */
+  #okbtn {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  h1 {
+    color: red;
+    font-family: fantasy;
+    font-weight: 100%;
+  }
+
+  /* end of notifier style */
+
+  #image1 {
+    width: 60%;
+    height: 70%;
+    margin-top: 30%;
+    margin-left: 35%;
+  }
+
+  #image2 {
+    width: 30%;
+    height: 30%;
+    margin-left: 35%;
+  }
+
+  #text {
+    margin-left: 30%;
+    font-family: fantasy;
+    color: rgb(255, 180, 196)
+  }
+
+  .card-body {
+    border: solid white 1px;
+    border-radius: 5%;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10%;
+    background: linear-gradient(to bottom, #ffffff 0%, #000000 100%);
+  }
+
+  .row.content {
+    height: 600px
+  }
+
+  /* Set gray background color and 100% height */
+  .sidenav {
+    background-color: #f1f1f1;
+    height: 80%;
+  }
+
+  #text2 {
+    text-align: center;
+    background: #f1f1f1;
+
+  }
+
+  #head {
+    background: gray;
+  }
+
+  #title {
+    text-align: center;
+    font-family: fantasy;
+    color: black;
+  }
+
+  #form0 {
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+
+  #form {
+    margin-left: 13%;
+    margin-right: 15%;
+  }
+
+  #form1 {
+    margin-left: 23%;
+    margin-right: 15%;
+  }
+
+  .btn {
+    margin-left: 30%;
+  }
+
+  #adminBTN {
+    float: right;
+    margin-right: 3%;
+  }
+
+  #studentBTN {
+    float: right;
+    margin-right: -27%;
+  }
+
+  .option {
+    width: 150%;
+    margin-left: 25px;
+  }
+  .t-center{
+      text-align: center;
+  }
+</style>
+
+<body>
+  <div>
+    <br>
+    <button type="button" class="btn btn-info" id="adminBTN">Login as Admin</button>
+    <button type="button" class="btn btn-success" id="studentBTN">Login as Student</button>
+  </div>
+
+  <!-- for student login -->
+  <div class="container-fluid" id="studentLogin">
+    <div class="row">
+      <div class="col-sm-4">
+        <img id="image1" src="images/admin.png">
+        <div>
+          <h1 id="text">
+            Counterpart Notifier
+          </h1>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="card-body">
+          <card-title id="title">
+            <h2>Login</h2>
+          </card-title>
+          <hr>
+
+          <img id="image2" src="images/stud.png">
+          <br>
+          <br>
+          <!-- Mao ni ang form for the login -->
+          <form id="form">
+            <div class="input-group form-group" id="form">
+              <select id="user" class="option">
+                <option value="Jericho" id="s1">Jericho</option>
+                <option value="Faye" id="s2">Faye</option>
+                <option value="Lealyn" id="s3">Lealyn</option>
+              </select>
+            </div>
+            <div class="form-group" id="form0">
+              <input type="submit" name="btn" value="Login" class="btn btn-outline-danger" id="studentbtnlogin">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- for admin login -->
+  <div class="container-fluid" id="adminLogin">
+    <div class="row">
+      <div class="col-sm-4">
+        <img id="image1" src="images/logo.png">
+        <div>
+          <h1 id="text">
+            Counterpart Notifier
+          </h1>
+        </div>
+      </div>
+      <div class="col-sm-8">
+        <div class="card-body">
+          <card-title id="title">
+            <h2>Login</h2>
+          </card-title>
+          <hr>
+          <img id="image2" src="images/admin.png">
+          <br>
+          <br>
+          <!-- Mao ni ang form for the login -->
+          <form id="form">
+            <div class="input-group form-group" id="form1">
+              <input type="text" class="form-control" value="Admin" id="admin">
+            </div>
+            <div class="form-group" id="form1">
+              <input type="submit" name="btn" value="Login" class="btn btn-outline-danger" id="adminbtnlogin">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is the modal nga mu pop up pag human mag login -->
+  <div class="modal" role="dialog" id="notifier" style="font-size:100%;height:300%">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div style="text-align:center">
+          <h5 class="card-title">
+            <h1 id="h1" style="font-size:500%">Counterpart Due</h1>
+          </h5>
+          <h2 id="h2" style="font-size:400%">You are requested to pay your monthly counterpart this month...</h2>
+          <br>
+          <button type="button" class="btn btn-danger" id="okbtn" style="width:20%">
+            <h3>OK</h3>
+          </button>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is the mnodal once the scholar is already paid on the counterpart! -->
+  <div class="modal" role="dialog" id="paidnotifier" style="font-size:100%;height:300%">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div style="text-align:center">
+          <h5 class="card-title">
+            <h1 id="h1" style="font-size:500%">Counterpart Paid</h1>
+          </h5>
+          <h2 id="h2" style="font-size:400%">You paid your counterpart for this month...</h2>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- for admin actions -->
+  <div class="container-fluid" id="adminActivity">
+    <div class="row content">
+      <div class="col-sm-3 sidenav" style="background-color: lightgray">
+        <h2 style="text-align:center;font-family: fantasy">Online Students</h2>
+        <!-- Mao ni siya ang butangan sa mga online nga students na may paid button -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+        <div id="studentSidebar">
+
+
+        </div>
+      </div>
+      <div class="col-sm-9" style="background-color: gray; padding-right:20px;">
+        <h2 style="text-align: center; font-family: fantasy; color: black">Paid Students for this Month</h2>
+        <hr>
+        <!-- Mao ni siya ang table!!!! -->
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th id="text2">Scholar Full Name</th>
+              <th id="text2">Month</th>
+              <th id="text2">Ammount</th>
+              <th id="text2">Remarks</th>
+            </tr>
+          </thead>
+          <tbody id="paymentBody" style="color:white">
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="notify.js"></script>
+</body>
+
+</html>

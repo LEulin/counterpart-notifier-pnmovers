@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+  }
+
+  /* for the notifier */
+  #okbtn {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+
+  h1 {
+    color: red;
+    font-family: fantasy;
+    font-weight: 100%;
+  }
+
+  /* end of notifier style */
+
+  #image1 {
+    width: 60%;
+    height: 70%;
+    margin-top: 30%;
+    margin-left: 35%;
+  }
+
+  #image2 {
+    width: 30%;
+    height: 30%;
+    margin-left: 35%;
+  }
+
+  #text {
+    margin-left: 30%;
+    font-family: fantasy;
+    color: rgb(255, 180, 196)
+  }
+
+  .card-body {
+    border: solid white 1px;
+    border-radius: 5%;
+    width: 40%;
+    margin-left: 30%;
+    margin-top: 10%;
+    background: linear-gradient(to bottom, #ffffff 0%, #000000 100%);
+  }
+
+  .row.content {
+    height: 600px
+  }
+
+  /* Set gray background color and 100% height */
+  .sidenav {
+    background-color: #f1f1f1;
+    height: 80%;
+  }
+
+  #text2 {
+    text-align: center;
+    background: #f1f1f1;
+
+  }
+
+  #head {
+    background: gray;
+  }
+
+  #title {
+    text-align: center;
+    font-family: fantasy;
+    color: black;
+  }
+
+  #form0 {
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+
+  #form {
+    margin-left: 13%;
+    margin-right: 15%;
+  }
+
+  #form1 {
+    margin-left: 23%;
+    margin-right: 15%;
+  }
+
+  .btn {
+    margin-left: 30%;
+  }
+
+  #adminBTN {
+    float: right;
+    margin-right: 3%;
+  }
+
+  #studentBTN {
+    float: right;
+    margin-right: -27%;
+  }
+
+  .option {
+    width: 150%;
+    margin-left: 25px;
+  }
